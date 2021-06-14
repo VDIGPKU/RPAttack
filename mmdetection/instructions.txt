@@ -1,0 +1,37 @@
+# 测试单张
+python demo/image_demo.py /data3/huanghao/coco/tianchi/images/2937.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+python demo/image_demo.py /data3/huanghao/coco/tianchi/images/2937.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+
+python demo/image_demo.py ./data/images/62.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+
+python demo/image_demo.py ./debugdata/911.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+
+python demo/image_demo.py /data2/huanghao/COCO/val2017/000000397133.jpg configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+
+python demo/image_demo.py /home/huanghao/mmdetection/attack_results/4.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+
+# 攻击
+python tools/attack.py configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --out results.pkl --eval bbox
+
+# 测试
+python tools/test.py configs/faster_rcnn/faster_rcnn_r50_fpn_1x.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --show-dir faster_rcnn_r50_fpn_1x_results
+
+# 攻击单张
+python demo/image_attack_single.py ./debugdata/911.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth 
+
+# 攻击单张天池
+python demo/image_attack_demo.py /data/huanghao/coco/tianchi/images/98.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --device cpu 
+
+CUDA_VISIBLE_DEVICES=7 python demo/image_attack_demo.py /data/huanghao/coco/val2017/000000397133.jpg configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+
+CUDA_VISIBLE_DEVICES=7 python demo/image_attack_demo.py ./data/images/62.png configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+
+# 攻击文件夹
+CUDA_VISIBLE_DEVICES=0 python demo/image_attack_demo.py 0 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=1 python demo/image_attack_demo.py 1 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=2 python demo/image_attack_demo.py 2 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=3 python demo/image_attack_demo.py 3 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=4 python demo/image_attack_demo.py 4 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=5 python demo/image_attack_demo.py 5 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=6 python demo/image_attack_demo.py 6 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
+CUDA_VISIBLE_DEVICES=7 python demo/image_attack_demo.py 7 ./data/images/ configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth
