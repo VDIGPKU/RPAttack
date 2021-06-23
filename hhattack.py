@@ -277,9 +277,12 @@ def attack_imgs(root_path, imgs, clean_path):
                     zero_iter = 0
                
             zero_iter += 1
-            if zero_iter >= 30:
+            if zero_iter >= 30 and last_state_attack_map is not None:
                 # 放大攻击的比例
                 attack_map = last_state_attack_map
+                zero_iter = 0
+            elif zero_iter >= 30 and last_state_attack_map is None:
+                # 保持攻击的比例
                 zero_iter = 0
             ############### 攻击结束 ###############
 
@@ -331,7 +334,7 @@ def attack_imgs(root_path, imgs, clean_path):
                 min_bbox_num = min(num, faster_rcnn_ori_bbox_num) + min(len(yolov4_boxes), yolov4_ori_bbox_num)
                 max_weight = faster_rcnn_weight + yolov4_weight
                 attack_image = img_copy
-            attack_rate = attack_map[attack_map==1].size / attack_map.size
+            attack_rate =  attack_map[attack_map==1].size / attack_map.size
             if is_break:
                 output_str = im + '当前{}/{}'.format(imgs.index(im), len(imgs)) + '次数{}'.format(attack_iter)+'最初：{}'.format(ori_bbox_num)+'当前最少：{}'.format(min_bbox_num)+'当前yolo:{}'.format(len(yolov4_boxes))+'当前faster rcnn:{}'.format(num)+"当前攻击比例:{}".format(attack_rate)+"当前inference为0"
             else:
@@ -367,5 +370,5 @@ if __name__ == '__main__':
     clean_path = './clean_data'
     imgs = os.listdir(root_path)
     imgs.sort()
-    imgs = ['008844.png']
+    imgs = ['4996.png']
     attack_imgs(root_path, imgs, clean_path)
