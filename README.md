@@ -8,8 +8,20 @@ We will update the readme soon!
 
 ## Install
 
+Choice 1:
 We prepare the conda environment for you: https://disk.pku.edu.cn:443/link/9A312BD333F774C901747F0C299172D0
 Valid Period：2026-07-15 23:59 
+
+Choice 2:
+You should install mmdetection follow this link: https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md
+
+Then download needed weights from office web, and we also prepare them for you: 
+
+## Quick Start
+
+```
+python hhattack.py
+```
 
 ## License
 
@@ -19,6 +31,7 @@ The project is only free for academic research purposes, but needs authorization
 
 If you use our code/model/data, please cite our paper: 
 
+```
 @inproceedings{huang2021rpattack,
   title={Rpattack: Refined Patch Attack on General Object Detectors},
   author={Huang, Hao and Wang, Yongtao and Chen, Zhaoyu and Tang, Zhi and Zhang, Wenqiang and Ma, Kai-Kuang},
@@ -27,5 +40,6 @@ If you use our code/model/data, please cite our paper:
   year={2021},
   organization={IEEE}
 }
+```
 
 
