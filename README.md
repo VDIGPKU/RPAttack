@@ -15,7 +15,8 @@ Valid Period：2026-07-15 23:59
 Choice 2:
 You should install mmdetection follow this link: https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md
 
-Then download needed weights from office web, and we also prepare them for you: 
+Then download needed weights from office web, and we also prepare them for you: https://disk.pku.edu.cn:443/link/EFC591987DEF9E8D151D0776F151257C Valid Period：2026-07-15 23:59 
+有效期限：2026-07-15 23:59
 
 ## Quick Start
 
