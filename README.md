@@ -9,7 +9,7 @@ We will update the readme soon!
 ## Install
 
 Choice 1:
-We prepare the conda environment for you: https://disk.pku.edu.cn:443/link/9A312BD333F774C901747F0C299172D0
+We prepare the conda environment for you: https://disk.pku.edu.cn:443/link/2D9DAD3357285E0A4ED2D5BACF4857D8
 Valid Period：2026-07-15 23:59 
 
 Choice 2:
